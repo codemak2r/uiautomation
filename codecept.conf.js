@@ -3,6 +3,7 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
+let envPath = 
 
 exports.config = {
   tests: './testcase/test_*.js',
@@ -16,8 +17,9 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js'
-
+    I: './steps_file.js',
+    ...require("dotenv").config({path: ".env"}),
+    page: './pages'
   },
   /*
   * 你要在测试执行前，先执行的代码。你可以设置 bootstrap
