@@ -1,0 +1,4 @@
+.vscode
+output 
+allure-report
+node_modules 
