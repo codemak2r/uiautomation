@@ -6,7 +6,7 @@ pipeline {
             agent {
                 docker {
                     image 'codeception/codeceptjs'
-                    args '--net=host --entrypoint='''
+                    args '--net=host --entrypoint=""'
                     reuseNode true
                 }
             }
