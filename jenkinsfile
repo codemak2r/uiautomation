@@ -12,7 +12,7 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                sh "codeceptjs run --steps"
+                sh "npx codeceptjs run --steps"
             }
         }
         stage('Test') {
