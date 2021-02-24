@@ -4,10 +4,11 @@ pipeline {
     stages {
         stage('Build') {
             agent {
+                
                 docker {
-                    image: 'codeception/codeceptjs'
-                    args: '-v $PWD:/tests --net=host'
-                    reuseNode: true
+                    image 'codeception/codeceptjs'
+                    args '-v $PWD:/tests --net=host'
+                    reuseNode true
                 }
             }
             steps {
