@@ -11,9 +11,10 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'http://localhost',
-      show: true,
+      show: false,
       windowSize: '1200x900',
-      waitForNavigation: "networkidle0" // 针对 SPA 应用
+      waitForNavigation: "networkidle0", // 针对 SPA 应用
+      chrome:"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     }
   },
   include: {
